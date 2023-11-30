@@ -41,17 +41,23 @@ Kubernetes
 
 - Install minikube
   - https://minikube.sigs.k8s.io/docs/start/
+
+- For loadbanacer run command below
+  > minikube tunnel
+  
+- Deploy Elastic-Stack
+  >kubectl apply -f elastic-stack.yaml
+
+- Deploy Redis-Stack
+  >kubectl apply -f redis-stack.yaml
    
-- Build Images
+- Build Image
   > docker build -t bookworm:latest -f /eclipse-workspace/BookWorm/src/main/resources/Dockerfile .
   
   > eval $(minikube docker-env)
   
 - Deploy Applications
-  > kubectl apply -f bookworm.yaml 
-  
-- For loadbanacer run command below
-  > minikube tunnel
+  > kubectl apply -f resumebucket.yaml
   
 - Kubernetes Dashboard
   > minikube dasboard
