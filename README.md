@@ -1,4 +1,4 @@
-# Bookworm
+# BookWorm
 
 Bookworm is a rest api for an online book store. 
 
