@@ -37,4 +37,29 @@ Kubernetes
 - StatisticsController : Restfull Service for statistics operations.
   - getMonthlyStatistics : Method for monthly statistics retrieval
 
+# Deployment
+
+- Install minikube
+  - https://minikube.sigs.k8s.io/docs/start/
+   
+- Build Images
+  > docker build -t bookworm:latest -f /eclipse-workspace/BookWorm/src/main/resources/Dockerfile .
+  
+  > eval $(minikube docker-env)
+  
+- Deploy Applications
+  > kubectl apply -f bookworm.yaml 
+  
+- For loadbanacer run command below
+  > minikube tunnel
+  
+- Kubernetes Dashboard
+  > minikube dasboard
+  
+- Prometheus&Grafana
+  > kubectl create namespace monitoring
+  
+  > helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  
+  > helm install k8spromethuesstack --namespace monitoring prometheus-community/kube-prometheus-stack
 
