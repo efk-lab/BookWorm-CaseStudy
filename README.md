@@ -4,7 +4,7 @@ CaseStudy - Bookworm
 Bookworm is a rest api for an online book store. 
 
 
-# Teck Stack
+# Tech Stack
 Java11,
 Spring Boot(web, test, data-mongodb, data-redis, security, log4j2, cache, validation, aop)
 REST,
