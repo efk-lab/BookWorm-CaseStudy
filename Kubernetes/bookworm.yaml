@@ -284,7 +284,7 @@ spec:
     spec:
       containers:
       - name: bookworm
-        image: eftmk/bookworm:latest
+        image: bookworm:latest
         imagePullPolicy: Never
         ports:
           - containerPort: 8081
